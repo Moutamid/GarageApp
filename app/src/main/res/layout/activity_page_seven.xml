@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="26dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/kanit_bold"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/appColor"
+            android:text="Sous Caisse"
+            android:textSize="22dp" />
+
+        <!-- Échappement -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Échappement"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/echappement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fuit"
+            android:padding="13dp" />
+
+        <!-- Fuite huile -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Fuite huile"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/fuite_huile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fuit"
+            android:padding="13dp" />
+
+        <!-- Fuite liquide de refroidissement -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Fuite liquide de refroidissement"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/fuite_liquide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fuit"
+            android:padding="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/appColor"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Retour" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/appColor"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Suivant" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

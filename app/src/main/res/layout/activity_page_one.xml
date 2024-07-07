@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="26dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/kanit_bold"
+        android:gravity="center"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/appColor"
+        android:text="Immatriculation et Date CT"
+        android:textSize="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/kanit_bold"
+        android:text="Immatriculation"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/registration_number"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@drawable/edit_bg"
+        android:fontFamily="@font/kanit_medium"
+        android:hint="Entrez le numéro d'immatriculation"
+        android:inputType="text"
+        android:padding="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/kanit_bold"
+        android:text="Date CT"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/technical_inspection_date"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@drawable/edit_bg"
+        android:fontFamily="@font/kanit_medium"
+        android:hint="Entrez la date du contrôle technique"
+        android:inputType="date"
+        android:padding="13dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/appColor"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Suivant" />
+    </LinearLayout>
+</LinearLayout>

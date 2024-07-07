@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="26dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/kanit_bold"
+            android:gravity="center"
+            android:textColor="@color/appColor"
+            android:layout_marginTop="14dp"
+            android:text="DIRECTION / SUSPENSION / TRANSMISSION"
+            android:textSize="16dp" />
+
+        <!-- Bielette direction G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Bielette direction G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/bielette_direction_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Rotule direction G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Rotule direction G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/rotule_direction_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Rotule/triangle de suspension G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Rotule/triangle de suspension G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/rotule_suspension_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Amortisseur G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Amortisseur G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/amortisseur_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Ressort G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Ressort G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/ressort_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- roulement AVG -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Roulement AVG"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/roulement_avg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Souffler de cardan AVG -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Souffler de cardan AVG"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/soufflet_cardan_avg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Bielette direction D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Bielette direction D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/bielette_direction_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Rotule direction D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Rotule direction D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/rotule_direction_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Rotule/triangle de suspension D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Rotule/triangle de suspension D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/rotule_suspension_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Amortisseur D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Amortisseur D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/amortisseur_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Ressort D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Ressort D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/ressort_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Soufflet de cardan AVD -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Soufflet de cardan AVD"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/soufflet_cardan_avd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Roulement AVD -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Roulement AVD"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/roulement_avd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Roulement ARG -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Roulement ARG"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/roulement_arg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Roulement ARD -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Roulement ARD"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/roulement_ard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/appColor"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Retour" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/appColor"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Suivant" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

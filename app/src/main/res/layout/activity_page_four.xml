@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="26dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/kanit_bold"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:text="FREINAGE"
+            android:textColor="@color/appColor"
+            android:textSize="22dp" />
+
+        <!-- Disques avant (%) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Disques avant (%)"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/disques_avant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:padding="13dp" />
+
+        <!-- Plaquettes avant (%) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Plaquettes avant (%)"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/plaquettes_avant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:padding="13dp" />
+
+        <!-- Flexible G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Flexible G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/flexible_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Flexible D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Flexible D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/flexible_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Disques arrière: oui / non ? -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Disques arrière: oui / non ?"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/disques_arriere_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="13dp">
+
+            <RadioButton
+                android:id="@+id/disques_arriere_oui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/disques_arriere_non"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Non" />
+        </RadioGroup>
+
+        <!-- Disques arrière (%) -->
+        <TextView
+            android:id="@+id/disques_arriere_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Disques arrière (%)"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/disques_arriere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:padding="13dp" />
+
+        <!-- Plaquettes arrière (%) -->
+        <TextView
+            android:id="@+id/plaquettes_arriere_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Plaquettes arrière (%)"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/plaquettes_arriere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:padding="13dp" />
+
+        <!-- Flexible arrière G -->
+        <TextView
+            android:id="@+id/flexible_arriere_g_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Flexible arrière G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/flexible_arriere_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Flexible arrière D -->
+        <TextView
+            android:id="@+id/flexible_arriere_d_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Flexible arrière D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/flexible_arriere_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/appColor"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Retour" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/appColor"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Suivant" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

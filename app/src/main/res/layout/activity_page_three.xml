@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="26dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/kanit_bold"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:text="ECLAIRAGE ARRIERE"
+            android:textColor="@color/appColor"
+            android:textSize="22dp" />
+
+        <!-- Veilleuse G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Veilleuse G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/veilleuse_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Veilleuse D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Veilleuse D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/veilleuse_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Éclairage de plaque G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Éclairage de plaque G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/eclairage_plaque_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Éclairage de plaque D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Éclairage de plaque D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/eclairage_plaque_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Stop G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Stop G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/stop_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Stop D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Stop D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/stop_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- 3 ieme Stop -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="3 ieme Stop"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/troisieme_stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Clignotant G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Clignotant G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/clignotant_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Clignotant D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Clignotant D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/clignotant_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Marche arrière G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Marche arrière G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/marche_arriere_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Marche arrière D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Marche arrière D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/marche_arriere_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Anti brouillard -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Anti brouillard"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/anti_brouillard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Fonctionne"
+            android:padding="13dp" />
+
+        <!-- Optique casser G -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Optique casser G"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/optique_casser_g"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Cassé"
+            android:padding="13dp" />
+
+        <!-- Optique casser D -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Optique casser D"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/optique_casser_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Cassé"
+            android:padding="13dp" />
+
+        <!-- Plaque immatriculation ARR -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_bold"
+            android:text="Plaque immatriculation ARR"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/plaque_immatriculation_arr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Visible"
+            android:padding="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/appColor"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Retour" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/appColor"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Suivant" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
