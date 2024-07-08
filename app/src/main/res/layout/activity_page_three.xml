@@ -30,13 +30,28 @@
             android:text="Veilleuse G"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/veilleuse_g"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/veilleuse_g_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/veilleuse_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Veilleuse D -->
         <TextView
@@ -47,13 +62,28 @@
             android:text="Veilleuse D"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/veilleuse_d"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/veilleuse_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/veilleuse_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Éclairage de plaque G -->
         <TextView
@@ -64,13 +94,28 @@
             android:text="Éclairage de plaque G"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/eclairage_plaque_g"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/eclairage_plaque_g_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/eclairage_plaque_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Éclairage de plaque D -->
         <TextView
@@ -81,13 +126,28 @@
             android:text="Éclairage de plaque D"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/eclairage_plaque_d"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/eclairage_plaque_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/eclairage_plaque_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Stop G -->
         <TextView
@@ -98,13 +158,28 @@
             android:text="Stop G"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/stop_g"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/stop_g_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/stop_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Stop D -->
         <TextView
@@ -115,13 +190,28 @@
             android:text="Stop D"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/stop_d"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/stop_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/stop_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- 3 ieme Stop -->
         <TextView
@@ -132,13 +222,28 @@
             android:text="3 ieme Stop"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/troisieme_stop"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/troisieme_stop_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/troisieme_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Clignotant G -->
         <TextView
@@ -149,13 +254,28 @@
             android:text="Clignotant G"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/clignotant_g"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/clignotant_g_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/clignotant_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Clignotant D -->
         <TextView
@@ -166,13 +286,28 @@
             android:text="Clignotant D"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/clignotant_d"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/clignotant_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/clignotant_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Marche arrière G -->
         <TextView
@@ -183,13 +318,28 @@
             android:text="Marche arrière G"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/marche_arriere_g"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/marche_arriere_g_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/marche_arriere_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Marche arrière D -->
         <TextView
@@ -200,13 +350,28 @@
             android:text="Marche arrière D"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/marche_arriere_d"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/marche_arriere_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/marche_arriere_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Anti brouillard -->
         <TextView
@@ -217,13 +382,28 @@
             android:text="Anti brouillard"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/anti_brouillard"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/anti_brouillard_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/anti_brouillard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Optique casser G -->
         <TextView
@@ -234,13 +414,28 @@
             android:text="Optique casser G"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/optique_casser_g"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Cassé"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/optique_casser_g_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Cassé"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/optique_casser_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Optique casser D -->
         <TextView
@@ -251,13 +446,28 @@
             android:text="Optique casser D"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/optique_casser_d"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Cassé"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/optique_casser_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Cassé"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/optique_casser_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <!-- Plaque immatriculation ARR -->
         <TextView
@@ -268,13 +478,28 @@
             android:text="Plaque immatriculation ARR"
             android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/plaque_immatriculation_arr"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Visible"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/plaque_immatriculation_arr_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Visible"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/plaque_immatriculation_arr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

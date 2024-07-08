@@ -19,7 +19,7 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@drawable/btn_bg"
-            android:text="Sélectionner des Images"
+            android:text="Prendre une photo"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="12sp" />

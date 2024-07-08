@@ -30,68 +30,148 @@
             android:text="Disques avant (%)"
             android:textSize="18sp" />
 
-        <SeekBar
-            android:id="@+id/disques_avant"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="100"
-            android:padding="13dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:fontFamily="@font/kanit_medium"
+                android:paddingEnd="8dp"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/disques_avant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:padding="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pas OK"
+                android:fontFamily="@font/kanit_medium"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
 
         <!-- Plaquettes avant (%) -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Plaquettes avant (%)"
             android:textSize="18sp" />
-
-        <SeekBar
-            android:id="@+id/plaquettes_avant"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="100"
-            android:padding="13dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:fontFamily="@font/kanit_medium"
+                android:paddingEnd="8dp"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/plaquettes_avant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:padding="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pas OK"
+                android:fontFamily="@font/kanit_medium"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
 
         <!-- Flexible G -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Flexible G"
             android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/flexible_g"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/veilleuse_g_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/flexible_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
+     
 
         <!-- Flexible D -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Flexible D"
             android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/flexible_d"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/flexible_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
+     
         <!-- Disques arrière: oui / non ? -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Disques arrière: oui / non ?"
             android:textSize="18sp" />
@@ -123,70 +203,149 @@
             android:id="@+id/disques_arriere_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Disques arrière (%)"
             android:textSize="18sp" />
-
-        <SeekBar
-            android:id="@+id/disques_arriere"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="100"
-            android:padding="13dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:fontFamily="@font/kanit_medium"
+                android:paddingEnd="8dp"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/disques_arriere"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:padding="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pas OK"
+                android:fontFamily="@font/kanit_medium"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
 
         <!-- Plaquettes arrière (%) -->
         <TextView
             android:id="@+id/plaquettes_arriere_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Plaquettes arrière (%)"
             android:textSize="18sp" />
-
-        <SeekBar
-            android:id="@+id/plaquettes_arriere"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="100"
-            android:padding="13dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:fontFamily="@font/kanit_medium"
+                android:paddingEnd="8dp"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/plaquettes_arriere"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:padding="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pas OK"
+                android:fontFamily="@font/kanit_medium"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
 
         <!-- Flexible arrière G -->
         <TextView
             android:id="@+id/flexible_arriere_g_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Flexible arrière G"
             android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/flexible_arriere_g"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/flexible_arriere_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
+
+
 
         <!-- Flexible arrière D -->
         <TextView
             android:id="@+id/flexible_arriere_d_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Flexible arrière D"
             android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/flexible_arriere_d"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fonctionne"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fonctionne"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/flexible_arriere_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"

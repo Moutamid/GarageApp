@@ -29,14 +29,29 @@
             android:fontFamily="@font/kanit_bold"
             android:text="Échappement"
             android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/echappement"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fuit"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fuit"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/echappement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
+
+
 
         <!-- Fuite huile -->
         <TextView
@@ -46,14 +61,29 @@
             android:fontFamily="@font/kanit_bold"
             android:text="Fuite huile"
             android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/fuite_huile"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fuit"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fuit"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/fuite_huile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
+
+
 
         <!-- Fuite liquide de refroidissement -->
         <TextView
@@ -63,14 +93,28 @@
             android:fontFamily="@font/kanit_bold"
             android:text="Fuite liquide de refroidissement"
             android:textSize="18sp" />
-
-        <CheckBox
-            android:id="@+id/fuite_liquide"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_medium"
-            android:text="Fuit"
-            android:padding="13dp" />
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_medium"
+                android:text="Fuit"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/fuite_liquide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/kanit_medium"/>
+        </RelativeLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
