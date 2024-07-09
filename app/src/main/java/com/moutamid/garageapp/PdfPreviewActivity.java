@@ -1,6 +1,7 @@
 package com.moutamid.garageapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -32,6 +33,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PdfPreviewActivity extends AppCompatActivity {
     int marginTop;
@@ -132,12 +135,11 @@ public class PdfPreviewActivity extends AppCompatActivity {
         plaqueImmatriculationArrCheckbox = findViewById(R.id.plaque_immatriculation_arr);
 
         previewRecyclerView = findViewById(R.id.preview_recycler_view);
+        imageUriList = new ArrayList<>();
 
+        loadImageUriList();
         // Restore checkbox states from Stash
         restoreCheckboxStates();
-
-        // Get image URIs from intent
-        imageUriList = getIntent().getParcelableArrayListExtra("imageUriList");
 
         // Initialize RecyclerView if image URI list is not empty
         if (imageUriList != null) {
@@ -329,12 +331,12 @@ public class PdfPreviewActivity extends AppCompatActivity {
         // Example: Display fetched values from Stash
         y = drawText(canvas, "Disques Avant: " + Stash.getInt("disquesAvantValue", 0), 50, y + 25, paint, pageHeight, 2, document, pageInfo);
         y = drawText(canvas, "Plaquettes Avant: " + Stash.getInt("plaquettesAvantValue", 0), 50, y, paint, pageHeight, 2, document, pageInfo);
-        y = drawText(canvas, "Flexible G: " + (Stash.getBoolean("flexibleGChecked", false) ? "Oui" : "Non"), 50, y, paint, pageHeight, 2, document, pageInfo);
-        y = drawText(canvas, "Flexible D: " + (Stash.getBoolean("flexibleDChecked", false) ? "Oui" : "Non"), 50, y, paint, pageHeight, 2, document, pageInfo);
+        y = drawText(canvas, "Flexible G: " + (Stash.getBoolean("flexibleGChecked", false) ? "Non" : "Oui"), 50, y, paint, pageHeight, 2, document, pageInfo);
+        y = drawText(canvas, "Flexible D: " + (Stash.getBoolean("flexibleDChecked", false) ? "Non" : "Oui"), 50, y, paint, pageHeight, 2, document, pageInfo);
         y = drawText(canvas, "Disques Arriere: " + (Stash.getBoolean("disquesArriereOuiSelected", false) ? Stash.getInt("disquesArriereValue", 0) : "Non"), 50, y, paint, pageHeight, 2, document, pageInfo);
         y = drawText(canvas, "Plaquettes Arriere: " + Stash.getInt("plaquettesArriereValue", 0), 50, y, paint, pageHeight, 2, document, pageInfo);
-        y = drawText(canvas, "Flexible Arriere G: " + (Stash.getBoolean("flexibleArriereGChecked", false) ? "Oui" : "Non"), 50, y, paint, pageHeight, 2, document, pageInfo);
-        y = drawText(canvas, "Flexible Arriere D: " + (Stash.getBoolean("flexibleArriereDChecked", false) ? "Oui" : "Non"), 50, y, paint, pageHeight, 2, document, pageInfo);
+        y = drawText(canvas, "Flexible Arriere G: " + (Stash.getBoolean("flexibleArriereGChecked", false) ? "Non" : "Oui"), 50, y, paint, pageHeight, 2, document, pageInfo);
+        y = drawText(canvas, "Flexible Arriere D: " + (Stash.getBoolean("flexibleArriereDChecked", false) ? "Non" : "Oui"), 50, y, paint, pageHeight, 2, document, pageInfo);
         y = drawText(canvas, "PNEUMATIQUE", (pageInfo.getPageWidth() / 2) - 60, y + 25, paint, pageHeight, marginBottom, document, pageInfo);
 
         y = drawText(canvas, "Pneu av taille: " + Stash.getString("pneuAvantTaille"), 50, y + 25, paint, pageHeight, 2, document, pageInfo);
@@ -344,9 +346,9 @@ public class PdfPreviewActivity extends AppCompatActivity {
 
         y = drawText(canvas, "SOUS CAISSE", (pageInfo.getPageWidth() / 2) - 60, y + 25, paint, pageHeight, marginBottom, document, pageInfo);
 
-        y = drawText(canvas, "Échappement: " + (Stash.getBoolean("echappementChecked", false) ? "Oui" : "Non"), 50, y + 25, paint, pageHeight, 2, document, pageInfo);
-        y = drawText(canvas, "Fuite huile: " + (Stash.getBoolean("fuiteHuileChecked", false) ? "Oui" : "Non"), 50, y, paint, pageHeight, 2, document, pageInfo);
-        y = drawText(canvas, "Fuite liquide de refroidissement: " + (Stash.getBoolean("fuiteLiquideChecked", false) ? "Oui" : "Non"), 50, y, paint, pageHeight, 2, document, pageInfo);
+        y = drawText(canvas, "Échappement: " + (Stash.getBoolean("echappementChecked", false) ? "Non" : "Oui"), 50, y + 25, paint, pageHeight, 2, document, pageInfo);
+        y = drawText(canvas, "Fuite huile: " + (Stash.getBoolean("fuiteHuileChecked", false) ? "Non" : "Oui"), 50, y, paint, pageHeight, 2, document, pageInfo);
+        y = drawText(canvas, "Fuite liquide de refroidissement: " + (Stash.getBoolean("fuiteLiquideChecked", false) ? "Non" : "Oui"), 50, y, paint, pageHeight, 2, document, pageInfo);
 
         Log.d("gat", y + "");
         // Draw images if available
@@ -406,7 +408,7 @@ public class PdfPreviewActivity extends AppCompatActivity {
         paint.setTextAlign(Paint.Align.LEFT);
         paint.setColor(getResources().getColor(android.R.color.black));
         paint.setFakeBoldText(true);
-        canvas.drawText(label + " :    " + (checkBox.isChecked() ? "True" : "False"), 50, y, paint);
+        canvas.drawText(label + " :    " + (checkBox.isChecked() ? "Non" : "Oui"), 50, y, paint);
         return y + 25; // Return new y position
     }
 
@@ -456,7 +458,13 @@ public class PdfPreviewActivity extends AppCompatActivity {
         // Return the canvas for drawing content
         return canvas;
     }
-
+    private void loadImageUriList() {
+        SharedPreferences sharedPreferences = getSharedPreferences("ImagePreferences", MODE_PRIVATE);
+        Set<String> uriSet = sharedPreferences.getStringSet("imageUris", new HashSet<>());
+        for (String uriString : uriSet) {
+            imageUriList.add(Uri.parse(uriString));
+        }
+    }
 
     public void home(View view) {
         startActivity(new Intent(this, PageOneActivity.class));

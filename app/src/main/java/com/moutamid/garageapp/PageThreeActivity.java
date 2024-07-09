@@ -92,4 +92,8 @@ public class PageThreeActivity extends AppCompatActivity {
             }
         });
     }
+    public void camera(View view) {
+        startActivity(new Intent(this, ImagesActivity.class));
+
+    }
 }

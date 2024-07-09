@@ -52,6 +52,8 @@
             android:exported="false" />
         <activity
             android:name=".PageOneActivity"
+            android:exported="false" /> <activity
+            android:name=".ImagesActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

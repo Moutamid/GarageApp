@@ -29,26 +29,20 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-public class MainActivity extends AppCompatActivity {
+public class ImagesActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ImageAdapter imageAdapter;
     private ArrayList<Uri> imageUriList;
     private Uri photoURI;
-
-    // ActivityResultLauncher for permission request
     private ActivityResultLauncher<String> requestPermissionLauncher;
-
-    // ActivityResultLauncher for taking picture
     private ActivityResultLauncher<Uri> takePictureLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_images);
         Button btnSelectImages = findViewById(R.id.btn_select_images);
-        Button btnPreviewPdf = findViewById(R.id.btn_preview_pdf);
         recyclerView = findViewById(R.id.recycler_view);
         imageUriList = new ArrayList<>();
         imageAdapter = new ImageAdapter(imageUriList, new ImageAdapter.OnImageClickListener() {
@@ -62,22 +56,15 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(imageAdapter);
 
-        // Load saved image URIs
-        loadImageUriList();
+        loadImageUriList(); // Load saved image URIs
 
-        // Initialize ActivityResultLauncher for permission request
         requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(),
                 isGranted -> {
                     if (isGranted) {
-                        // Permission is granted, proceed to open camera
                         openCamera();
-                    } else {
-                        // Permission denied, handle accordingly
-                        // For example, show a message or disable functionality
                     }
                 });
 
-        // Initialize ActivityResultLauncher for taking picture
         takePictureLauncher = registerForActivityResult(new ActivityResultContracts.TakePicture(),
                 isSuccess -> {
                     if (isSuccess && photoURI != null) {
@@ -94,23 +81,13 @@ public class MainActivity extends AppCompatActivity {
                 checkPermissionAndOpenCamera();
             }
         });
-
-        btnPreviewPdf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                previewPdf();
-            }
-        });
     }
 
     private void checkPermissionAndOpenCamera() {
-        // Check if permission is granted
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_GRANTED) {
-            // Permission is already granted, proceed to open camera
             openCamera();
         } else {
-            // Permission has not been granted, request it
             requestPermissionLauncher.launch(Manifest.permission.CAMERA);
         }
     }
@@ -118,14 +95,11 @@ public class MainActivity extends AppCompatActivity {
     private void openCamera() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
             File photoFile = null;
             try {
                 photoFile = createImageFile();
             } catch (IOException ex) {
-                // Handle error while creating the File
             }
-            // Continue only if the File was successfully created
             if (photoFile != null) {
                 photoURI = FileProvider.getUriForFile(this,
                         "com.moutamid.garageapp.fileprovider",
@@ -136,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private File createImageFile() throws IOException {
-        // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
@@ -145,15 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 ".jpg",         /* suffix */
                 storageDir      /* directory */
         );
-
-        // Save a file: path for use with ACTION_VIEW intents
         return image;
-    }
-
-    private void previewPdf() {
-        Intent intent = new Intent(this, PdfPreviewActivity.class);
-        intent.putParcelableArrayListExtra("imageUriList", imageUriList);
-        startActivity(intent);
     }
 
     private void saveImageUriList() {
@@ -174,5 +139,9 @@ public class MainActivity extends AppCompatActivity {
             imageUriList.add(Uri.parse(uriString));
         }
         imageAdapter.notifyDataSetChanged();
+    }
+
+    public void next(View view) {
+        onBackPressed();
     }
 }

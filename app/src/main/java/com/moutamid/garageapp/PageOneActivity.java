@@ -122,4 +122,8 @@ public class PageOneActivity extends AppCompatActivity {
         }).start();
     }
 
+    public void camera(View view) {
+        startActivity(new Intent(this, ImagesActivity.class));
+
+    }
 }

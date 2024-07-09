@@ -120,4 +120,8 @@ public class PageFourActivity extends AppCompatActivity {
         Stash.put("flexibleArriereDChecked", flexibleArriereDCheckBox.isChecked());
         Stash.put("disquesArriereOuiSelected", disquesArriereOuiRadioButton.isChecked());
     }
+    public void camera(View view) {
+        startActivity(new Intent(this, ImagesActivity.class));
+
+    }
 }

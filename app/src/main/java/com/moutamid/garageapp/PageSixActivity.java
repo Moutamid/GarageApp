@@ -81,4 +81,8 @@ public class PageSixActivity extends AppCompatActivity {
         Stash.put("roulementARGChecked", roulementARGCheckBox.isChecked());
         Stash.put("roulementARDChecked", roulementARDCheckBox.isChecked());
     }
+    public void camera(View view) {
+        startActivity(new Intent(this, ImagesActivity.class));
+
+    }
 }

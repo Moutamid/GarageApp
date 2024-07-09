@@ -9,7 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="6dp"
+            android:onClick="camera"
+            android:layout_marginTop="8dp"
 
+            android:src="@drawable/camera" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -17,8 +25,8 @@
             android:fontFamily="@font/kanit_bold"
             android:gravity="center"
             android:textColor="@color/appColor"
-            android:layout_marginTop="14dp"
-            android:text="DIRECTION / SUSPENSION / TRANSMISSION"
+            android:layout_marginTop="-30dp"
+            android:text="DIRECTION / SUSPENSION \n/ TRANSMISSION"
             android:textSize="16dp" />
 
         <!-- Bielette direction G -->
