@@ -112,7 +112,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Veilleuse AVD -->
             <TextView
@@ -130,7 +130,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Croisement AVG -->
             <TextView
@@ -148,7 +148,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Croisement AVD -->
             <TextView
@@ -166,7 +166,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Plein Phare AVG -->
             <TextView
@@ -184,7 +184,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Plein Phare AVD -->
             <TextView
@@ -203,7 +203,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Anti-Brouillard AVG -->
             <TextView
@@ -221,7 +221,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Anti-Brouillard AVD -->
             <TextView
@@ -239,7 +239,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Clignotant AVG -->
             <TextView
@@ -257,7 +257,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Clignotant AVD -->
             <TextView
@@ -275,7 +275,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Optique casser G -->
             <TextView
@@ -403,7 +403,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Veilleuse D -->
             <TextView
@@ -421,7 +421,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Éclairage de plaque G -->
             <TextView
@@ -439,7 +439,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Éclairage de plaque D -->
             <TextView
@@ -457,7 +457,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Stop G -->
             <TextView
@@ -475,7 +475,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Stop D -->
             <TextView
@@ -493,7 +493,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- 3 ieme Stop -->
             <TextView
@@ -511,7 +511,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Clignotant G -->
             <TextView
@@ -529,7 +529,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Clignotant D -->
             <TextView
@@ -547,7 +547,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Marche arrière G -->
             <TextView
@@ -565,7 +565,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Marche arrière D -->
             <TextView
@@ -583,7 +583,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Anti brouillard -->
             <TextView
@@ -601,7 +601,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Optique casser G -->
             <TextView
@@ -729,7 +729,7 @@
                 android:clickable="false"
                 android:enabled="false"
 
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Flexible D -->
             <TextView
@@ -747,7 +747,7 @@
                 android:layout_marginTop="8dp"
                 android:clickable="false"
                 android:enabled="false"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Disques arrière: oui / non ? -->
             <TextView
@@ -840,7 +840,7 @@
                 android:enabled="false"
 
                 android:clickable="false"
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
             <!-- Flexible arrière D -->
             <TextView
@@ -859,7 +859,7 @@
                 android:clickable="false"
                 android:enabled="false"
 
-                android:text="Fonctionne" />
+                android:text="ne fonctionne pas" />
 
         </LinearLayout>
 
