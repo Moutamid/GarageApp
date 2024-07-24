@@ -82,6 +82,11 @@ public class PdfPreviewActivity extends AppCompatActivity {
     private RadioButton summaryDisquesArriereOuiRadioButton, summaryDisquesArriereNonRadioButton;
     EditText pneu_av_taille, pneu_arr_taille;
     SeekBar usure_avant, usure_arriere;
+    private CheckBox bieletteDirectionGCheckBox, rotuleDirectionGCheckBox, rotuleTriangleSuspensionGCheckBox,
+            amortisseurGCheckBox, ressortGCheckBox, roulementAVGCheckBox, souffletCardanAVGCheckBox,
+            bieletteDirectionDCheckBox, rotuleDirectionDCheckBox, rotuleTriangleSuspensionDCheckBox,
+            amortisseurDCheckBox, ressortDCheckBox, souffletCardanAVDCheckBox, roulementAVDCheckBox,
+            roulementARGCheckBox, roulementARDCheckBox;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -130,6 +135,23 @@ public class PdfPreviewActivity extends AppCompatActivity {
         optiqueCasserGCheckbox_page3 = findViewById(R.id.optique_casser_g_page3);
         optiqueCasserDCheckbox_page3 = findViewById(R.id.optique_casser_d_page3);
         plaqueImmatriculationArrCheckbox = findViewById(R.id.plaque_immatriculation_arr);
+        bieletteDirectionGCheckBox = findViewById(R.id.bielette_direction_g);
+        rotuleDirectionGCheckBox = findViewById(R.id.rotule_direction_g);
+        rotuleTriangleSuspensionGCheckBox = findViewById(R.id.rotule_suspension_g);
+        amortisseurGCheckBox = findViewById(R.id.amortisseur_g);
+        ressortGCheckBox = findViewById(R.id.ressort_g);
+        roulementAVGCheckBox = findViewById(R.id.roulement_avg);
+        souffletCardanAVGCheckBox = findViewById(R.id.soufflet_cardan_avg);
+
+        bieletteDirectionDCheckBox = findViewById(R.id.bielette_direction_d);
+        rotuleDirectionDCheckBox = findViewById(R.id.rotule_direction_d);
+        rotuleTriangleSuspensionDCheckBox = findViewById(R.id.rotule_suspension_d);
+        amortisseurDCheckBox = findViewById(R.id.amortisseur_d);
+        ressortDCheckBox = findViewById(R.id.ressort_d);
+        souffletCardanAVDCheckBox = findViewById(R.id.soufflet_cardan_avd);
+        roulementAVDCheckBox = findViewById(R.id.roulement_avd);
+        roulementARGCheckBox = findViewById(R.id.roulement_arg);
+        roulementARDCheckBox = findViewById(R.id.roulement_ard);
 
         previewRecyclerView = findViewById(R.id.preview_recycler_view);
         imageUriList = new ArrayList<>();
@@ -241,7 +263,25 @@ public class PdfPreviewActivity extends AppCompatActivity {
         optiqueCasserGCheckbox_page3.setChecked(Stash.getBoolean("optiqueCasserGChecked"));
         optiqueCasserDCheckbox_page3.setChecked(Stash.getBoolean("optiqueCasserDChecked"));
         plaqueImmatriculationArrCheckbox.setChecked(Stash.getBoolean("plaqueImmatriculationArrChecked"));
-    }
+
+
+        bieletteDirectionGCheckBox.setChecked(Stash.getBoolean("bieletteDirectionGChecked", false));
+        rotuleDirectionGCheckBox.setChecked(Stash.getBoolean("rotuleDirectionGChecked", false));
+        rotuleTriangleSuspensionGCheckBox.setChecked(Stash.getBoolean("rotuleTriangleSuspensionGChecked", false));
+        amortisseurGCheckBox.setChecked(Stash.getBoolean("amortisseurGChecked", false));
+        ressortGCheckBox.setChecked(Stash.getBoolean("ressortGChecked", false));
+        roulementAVGCheckBox.setChecked(Stash.getBoolean("roulementAVGChecked", false));
+        souffletCardanAVGCheckBox.setChecked(Stash.getBoolean("souffletCardanAVGChecked", false));
+
+        bieletteDirectionDCheckBox.setChecked(Stash.getBoolean("bieletteDirectionDChecked", false));
+        rotuleDirectionDCheckBox.setChecked(Stash.getBoolean("rotuleDirectionDChecked", false));
+        rotuleTriangleSuspensionDCheckBox.setChecked(Stash.getBoolean("rotuleTriangleSuspensionDChecked", false));
+        amortisseurDCheckBox.setChecked(Stash.getBoolean("amortisseurDChecked", false));
+        ressortDCheckBox.setChecked(Stash.getBoolean("ressortDChecked", false));
+        souffletCardanAVDCheckBox.setChecked(Stash.getBoolean("souffletCardanAVDChecked", false));
+        roulementAVDCheckBox.setChecked(Stash.getBoolean("roulementAVDChecked", false));
+        roulementARGCheckBox.setChecked(Stash.getBoolean("roulementARGChecked", false));
+        roulementARDCheckBox.setChecked(Stash.getBoolean("roulementARDChecked", false));  }
 
     // Method to generate PDF
     private void generatePdf() {
@@ -281,7 +321,6 @@ public class PdfPreviewActivity extends AppCompatActivity {
         // Draw checkbox states
 
         y = drawCheckboxState(canvas, veilleuseAvgCheckbox, veilleuseAvdCheckbox, "         Croisement AVG", "Veilleuse AVG", y);
-
         y = drawCheckboxState(canvas, croisementAvgCheckbox, croisementAvdCheckbox, "     Croisement AVD", "Croisement AVG", y);
         y = drawCheckboxState(canvas, pleinPhareAvgCheckbox, pleinPhareAvdCheckbox, "    Plein Phare AVD", "Plein Phare AVG", y);
         y = drawCheckboxState(canvas, antiBrouillardAvgCheckbox, antiBrouillardAvdCheckbox, "Anti-Brouillard AVD", "Anti-Brouillard AVG", y);
@@ -315,14 +354,39 @@ public class PdfPreviewActivity extends AppCompatActivity {
         y = drawText(canvas, "Flexible D: " + (Stash.getBoolean("flexibleDChecked", false) ? "Non" : "Oui") + "                          " + "Disques Arriere: " + (Stash.getBoolean("disquesArriereOuiSelected", false) ? Stash.getInt("disquesArriereValue", 0) : "Non") + "                     " + "Plaquettes Arriere: " + Stash.getInt("plaquettesArriereValue", 0), 50, y, paint);
         y = drawText(canvas, "Flexible Arriere G: " + (Stash.getBoolean("flexibleArriereGChecked", false) ? "Non" : "Oui") + "                                                                       " + "Flexible Arriere D: " + (Stash.getBoolean("flexibleArriereDChecked", false) ? "Non" : "Oui"), 50, y, paint);
 
+        int x = 50; // Initial x position
+        int column = 0; // Track which column we're in (0 for left, 1 for right)
+        Log.d("asdas", ((pageInfo.getPageWidth()/2)+90)+" margin");
+        document.finishPage(page);
+        page = document.startPage(pageInfo);
+        canvas = page.getCanvas();
+        y = 50;
+        canvas.drawText("DIRECTION / SUSPENSION / TRANSMISSION", (pageInfo.getPageWidth() / 2)-130 , y + 25, paint);
+        y = drawText(canvas, "Bielette Direction G: " + (Stash.getBoolean("bieletteDirectionGChecked", false) ? "Oui" : "Non") + "                                                              " +
+                "Rotule Direction G: " + (Stash.getBoolean("rotuleDirectionGChecked", false) ? "Oui" : "Non"), 50, y + 65, paint);
+        y = drawText(canvas, "Rotule Triangle Suspension G: " + (Stash.getBoolean("rotuleTriangleSuspensionGChecked", false) ? "Oui" : "Non") + "                                           " +
+                "Amortisseur G: " + (Stash.getBoolean("amortisseurGChecked", false) ? "Oui" : "Non"), 50, y, paint);
+        y = drawText(canvas, "Ressort G: " + (Stash.getBoolean("ressortGChecked", false) ? "Oui" : "Non") + "                                                                              " +
+                "Roulement AVG: " + (Stash.getBoolean("roulementAVGChecked", false) ? "Oui" : "Non"), 50, y, paint);
+        y = drawText(canvas, "Soufflet Cardan AVG: " + (Stash.getBoolean("souffletCardanAVGChecked", false) ? "Oui" : "Non") + "                                                          " +
+                "Bielette Direction D: " + (Stash.getBoolean("bieletteDirectionDChecked", false) ? "Oui" : "Non"), 50, y, paint);
+        y = drawText(canvas, "Rotule Direction D: " + (Stash.getBoolean("rotuleDirectionDChecked", false) ? "Oui" : "Non") + "                                                               " +
+                "Rotule Triangle Suspension D: " + (Stash.getBoolean("rotuleTriangleSuspensionDChecked", false) ? "Oui" : "Non"), 50, y, paint);
+        y = drawText(canvas, "Amortisseur D: " + (Stash.getBoolean("amortisseurDChecked", false) ? "Oui" : "Non") + "                                                                      " +
+                "Ressort D: " + (Stash.getBoolean("ressortDChecked", false) ? "Oui" : "Non"), 50, y, paint);
+        y = drawText(canvas, "Soufflet Cardan AVD: " + (Stash.getBoolean("souffletCardanAVDChecked", false) ? "Oui" : "Non") + "                                                          " +
+                "Roulement AVD: " + (Stash.getBoolean("roulementAVDChecked", false) ? "Oui" : "Non"), 50, y, paint);
+        y = drawText(canvas, "Roulement ARG: " + (Stash.getBoolean("roulementARGChecked", false) ? "Oui" : "Non") + "                                                                   " +
+                "Roulement ARD: " + (Stash.getBoolean("roulementARDChecked", false) ? "Oui" : "Non"), 50, y, paint);
         Log.d("gat", y + "");
+
+        canvas.drawText("Images", (pageInfo.getPageWidth() / 2) - 60, y + 35, paint);
+
         // Draw images if available
         if (imageUriList != null && !imageUriList.isEmpty()) {
             y += 20;
             int maxImageHeight = 320; // Maximum height for images
             int columnWidth = pageInfo.getPageWidth() / 2 - 50; // Adjust for margin
-            int x = 50; // Initial x position
-            int column = 0; // Track which column we're in (0 for left, 1 for right)
 
             for (Uri uri : imageUriList) {
                 try {
@@ -395,6 +459,9 @@ public class PdfPreviewActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         document.close();
+        SharedPreferences sharedPreferences = getSharedPreferences("ImagePreferences", MODE_PRIVATE);
+        Set<String> uriSet = sharedPreferences.getStringSet("imageUris", new HashSet<>());
+        uriSet.clear();
         Uri pdfUri = FileProvider.getUriForFile(this, "com.moutamid.garageapp.fileprovider", file);
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("application/pdf");
@@ -414,6 +481,9 @@ public class PdfPreviewActivity extends AppCompatActivity {
 
         // Close the document
         document.close();
+        SharedPreferences sharedPreferences = getSharedPreferences("ImagePreferences", MODE_PRIVATE);
+        Set<String> uriSet = sharedPreferences.getStringSet("imageUris", new HashSet<>());
+        uriSet.clear();
         Uri pdfUri = FileProvider.getUriForFile(this, "com.moutamid.garageapp.fileprovider", file);
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setDataAndType(pdfUri, "application/pdf");

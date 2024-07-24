@@ -1,8 +1,10 @@
 package com.moutamid.garageapp;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -21,17 +23,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PageOneActivity extends AppCompatActivity {
 
     private EditText registrationNumberEditText;
     private EditText technicalInspectionDateEditText;
 
+    @SuppressLint("MutatingSharedPrefs")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_one);
         checkApp(PageOneActivity.this);
+        SharedPreferences sharedPreferences = getSharedPreferences("ImagePreferences", MODE_PRIVATE);
+        Set<String> uriSet = sharedPreferences.getStringSet("imageUris", new HashSet<>());
+        uriSet.clear();
         registrationNumberEditText = findViewById(R.id.registration_number);
         technicalInspectionDateEditText = findViewById(R.id.technical_inspection_date);
         Button nextButton = findViewById(R.id.next_button);
