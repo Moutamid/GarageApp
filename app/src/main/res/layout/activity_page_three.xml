@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -111,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -143,7 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -175,7 +175,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -207,7 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -239,7 +239,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -271,7 +271,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -303,7 +303,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -335,7 +335,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -367,7 +367,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -399,7 +399,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="ne fonctionne pas"
+                android:text="coupé "
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 
@@ -412,13 +412,13 @@
                 android:fontFamily="@font/kanit_medium"/>
         </RelativeLayout>
 
-        <!-- Optique casser G -->
+        <!-- Optique G -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/kanit_bold"
-            android:text="Optique casser G"
+            android:text="Optique G"
             android:textSize="18sp" />
 
         <RelativeLayout
@@ -444,13 +444,13 @@
                 android:fontFamily="@font/kanit_medium"/>
         </RelativeLayout>
 
-        <!-- Optique casser D -->
+        <!-- Optique D -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/kanit_bold"
-            android:text="Optique casser D"
+            android:text="Optique D"
             android:textSize="18sp" />
 
         <RelativeLayout
@@ -495,7 +495,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kanit_medium"
-                android:text="Visible"
+                android:text="illisible"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
 

@@ -317,13 +317,13 @@ public class PdfPreviewActivity extends AppCompatActivity {
         y = drawCheckboxState(canvas, veilleuseAvgCheckbox, veilleuseAvdCheckbox, croisementAvgCheckbox,
                 "Veilleuse AVG", "Veilleuse AVD", "Croisement AVG", y);
         y = drawCheckboxState(canvas, optiqueCasserDCheckbox, croisementAvdCheckbox, pleinPhareAvgCheckbox,
-                "Optique Casser D", "Croisement AVD", "Plein Phare AVG", y);
+                "Optique D", "Croisement AVD", "Plein Phare AVG", y);
         y = drawCheckboxState(canvas, optiqueTerneGCheckbox, pleinPhareAvdCheckbox, antiBrouillardAvgCheckbox,
                 "Optique Terne G", "Plein Phare AVD", "Anti-Brouillard AVG", y);
         y = drawCheckboxState(canvas, optiqueTerneDCheckbox, antiBrouillardAvdCheckbox, clignotantAvgCheckbox,
                 "Optique Terne D", "Anti-Brouillard AVD", "Clignotant AVG", y);
         y = drawCheckboxState(canvas, clignotantAvdCheckbox, optiqueCasserGCheckbox,
-                "                          Clignotant AVD", "Optique Casser G", y);
+                "                          Clignotant AVD", "Optique G", y);
 
         canvas.drawText("ECLAIRAGE ARRIERE", (pageInfo.getPageWidth() / 2) - 60, y + 20, paint);
 
@@ -340,7 +340,7 @@ public class PdfPreviewActivity extends AppCompatActivity {
         y = drawCheckboxState(canvas, marcheArriereDCheckbox, antiBrouillardCheckbox, antiBrouillardCheckbox,
                 "Marche Arriere D", "Anti-Brouillard", "Anti-Brouillard", y);
         y = drawCheckboxState(canvas, optiqueCasserGCheckbox_page3, optiqueCasserDCheckbox_page3, optiqueCasserDCheckbox_page3,
-                "Optique Casser G", "Optique Casser D", "Optique Casser D", y);
+                "Optique G", "Optique D", "Optique D", y);
         y = drawText(canvas, "Plaque Immatriculation ARR :  " + plaqueImmatriculationArrCheckbox.isChecked(), 50, y, paint);
 
         canvas.drawText("PNEUMATIQUE", (pageInfo.getPageWidth() / 2) - 60, y + 5, paint);

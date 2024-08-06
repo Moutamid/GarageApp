@@ -112,7 +112,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Veilleuse AVD -->
             <TextView
@@ -130,7 +130,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Croisement AVG -->
             <TextView
@@ -148,7 +148,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Croisement AVD -->
             <TextView
@@ -166,7 +166,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Plein Phare AVG -->
             <TextView
@@ -184,7 +184,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Plein Phare AVD -->
             <TextView
@@ -203,7 +203,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Anti-Brouillard AVG -->
             <TextView
@@ -221,7 +221,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Anti-Brouillard AVD -->
             <TextView
@@ -239,7 +239,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Clignotant AVG -->
             <TextView
@@ -257,7 +257,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Clignotant AVD -->
             <TextView
@@ -275,15 +275,15 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
-            <!-- Optique casser G -->
+            <!-- Optique G -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/kanit_bold"
-                android:text="Optique casser G"
+                android:text="Optique G"
                 android:textSize="14dp" />
 
             <CheckBox
@@ -295,13 +295,13 @@
                 android:padding="13dp"
                 android:text="Cassé" />
 
-            <!-- Optique casser D -->
+            <!-- Optique D -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/kanit_bold"
-                android:text="Optique casser D"
+                android:text="Optique D"
                 android:textSize="14dp" />
 
             <CheckBox
@@ -365,7 +365,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Visible" />
+                android:text="illisible" />
 
 
         </LinearLayout>
@@ -403,7 +403,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Veilleuse D -->
             <TextView
@@ -421,7 +421,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Éclairage de plaque G -->
             <TextView
@@ -439,7 +439,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Éclairage de plaque D -->
             <TextView
@@ -457,7 +457,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Stop G -->
             <TextView
@@ -475,7 +475,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Stop D -->
             <TextView
@@ -493,7 +493,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- 3 ieme Stop -->
             <TextView
@@ -511,7 +511,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Clignotant G -->
             <TextView
@@ -529,7 +529,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Clignotant D -->
             <TextView
@@ -547,7 +547,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Marche arrière G -->
             <TextView
@@ -565,7 +565,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Marche arrière D -->
             <TextView
@@ -583,7 +583,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Anti brouillard -->
             <TextView
@@ -601,15 +601,15 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
-            <!-- Optique casser G -->
+            <!-- Optique G -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/kanit_bold"
-                android:text="Optique casser G"
+                android:text="Optique G"
                 android:textSize="14dp" />
 
             <CheckBox
@@ -621,13 +621,13 @@
                 android:padding="13dp"
                 android:text="Cassé" />
 
-            <!-- Optique casser D -->
+            <!-- Optique D -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/kanit_bold"
-                android:text="Optique casser D"
+                android:text="Optique D"
                 android:textSize="14dp" />
 
             <CheckBox
@@ -655,7 +655,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/kanit_medium"
                 android:padding="13dp"
-                android:text="Visible" />
+                android:text="illisible" />
 
 
         </LinearLayout>
@@ -729,7 +729,7 @@
                 android:clickable="false"
                 android:enabled="false"
 
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Flexible D -->
             <TextView
@@ -747,7 +747,7 @@
                 android:layout_marginTop="8dp"
                 android:clickable="false"
                 android:enabled="false"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Disques arrière: oui / non ? -->
             <TextView
@@ -840,7 +840,7 @@
                 android:enabled="false"
 
                 android:clickable="false"
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
             <!-- Flexible arrière D -->
             <TextView
@@ -859,7 +859,7 @@
                 android:clickable="false"
                 android:enabled="false"
 
-                android:text="ne fonctionne pas" />
+                android:text="coupé " />
 
         </LinearLayout>
 
@@ -992,7 +992,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1024,7 +1024,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1059,7 +1059,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1092,7 +1092,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1126,7 +1126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1159,7 +1159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1191,7 +1191,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1225,7 +1225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1257,7 +1257,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1290,7 +1290,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1322,7 +1322,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1354,7 +1354,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1388,7 +1388,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1422,7 +1422,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1454,7 +1454,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
@@ -1486,7 +1486,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit_medium"
-                    android:text="ne fonctionne pas"
+                    android:text="coupé "
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true" />
 
