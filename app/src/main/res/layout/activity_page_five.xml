@@ -16,7 +16,6 @@
             android:layout_marginEnd="6dp"
             android:onClick="camera"
             android:layout_marginTop="8dp"
-
             android:src="@drawable/camera" />
         <TextView
             android:layout_width="wrap_content"
@@ -48,11 +47,19 @@
             android:inputType="text"
             android:padding="13dp" />
 
-        <!-- Usure avant (%) -->
+        <TextView
+            android:id="@+id/percentage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text=""
+            android:textSize="16sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="-24dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Usure avant (%)"
             android:textSize="18sp" />
@@ -61,7 +68,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="6dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,11 +116,18 @@
             android:inputType="text"
             android:padding="13dp" />
 
-        <!-- Usure arrière (%) -->
         <TextView
+            android:id="@+id/percentage2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text=""
+            android:textSize="16sp" />         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-26dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Usure arrière (%)"
             android:textSize="18sp" />
@@ -122,7 +136,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="6dp">
 
             <TextView
                 android:layout_width="wrap_content"

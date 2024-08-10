@@ -37,6 +37,16 @@
             android:text="Disques avant (%)"
             android:textSize="18sp" />
 
+        <TextView
+            android:id="@+id/percentage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-26dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text=""
+            android:textSize="16sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,6 +88,16 @@
             android:fontFamily="@font/kanit_bold"
             android:text="Plaquettes avant (%)"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/percentage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-26dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text=""
+            android:textSize="16sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -205,12 +225,21 @@
                 android:text="Non" />
         </RadioGroup>
 
-        <!-- Disques arrière (%) -->
+        <TextView
+            android:id="@+id/percentage3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-6dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text=""
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/disques_arriere_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="-26dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Disques arrière (%)"
             android:textSize="18sp" />
@@ -247,12 +276,20 @@
         </LinearLayout>
 
 
-        <!-- Plaquettes arrière (%) -->
+        <TextView
+            android:id="@+id/percentage4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text=""
+            android:textSize="16sp" />
         <TextView
             android:id="@+id/plaquettes_arriere_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="-29dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Plaquettes arrière (%)"
             android:textSize="18sp" />

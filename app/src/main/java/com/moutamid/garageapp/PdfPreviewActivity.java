@@ -322,8 +322,8 @@ public class PdfPreviewActivity extends AppCompatActivity {
                 "Optique Terne G", "Plein Phare AVD", "Anti-Brouillard AVG", y);
         y = drawCheckboxState(canvas, optiqueTerneDCheckbox, antiBrouillardAvdCheckbox, clignotantAvgCheckbox,
                 "Optique Terne D", "Anti-Brouillard AVD", "Clignotant AVG", y);
-        y = drawCheckboxState(canvas, clignotantAvdCheckbox, optiqueCasserGCheckbox,
-                "                          Clignotant AVD", "Optique G", y);
+//        y = drawCheckboxState(canvas, clignotantAvdCheckbox, optiqueCasserGCheckbox,
+//                "                          Clignotant AVD", "Optique G", y);
 
         canvas.drawText("ECLAIRAGE ARRIERE", (pageInfo.getPageWidth() / 2) - 60, y + 20, paint);
 
@@ -341,54 +341,57 @@ public class PdfPreviewActivity extends AppCompatActivity {
                 "Marche Arriere D", "Anti-Brouillard", "Anti-Brouillard", y);
         y = drawCheckboxState(canvas, optiqueCasserGCheckbox_page3, optiqueCasserDCheckbox_page3, optiqueCasserDCheckbox_page3,
                 "Optique G", "Optique D", "Optique D", y);
-        y = drawText(canvas, "Plaque Immatriculation ARR :  " + plaqueImmatriculationArrCheckbox.isChecked(), 50, y, paint);
-
+        if (plaqueImmatriculationArrCheckbox.isChecked()) {
+            y = drawText(canvas, "Plaque Immatriculation ARR :  " + "\u2713", 50, y, paint);
+        } else {
+            y = drawText(canvas, "Plaque Immatriculation ARR :  " + "X", 50, y, paint);
+        }
         canvas.drawText("PNEUMATIQUE", (pageInfo.getPageWidth() / 2) - 60, y + 5, paint);
 
         y = drawText(canvas, "Pneu av taille: " + Stash.getString("pneuAvantTaille") + "                                                                  " + "Usure avant (%): " + (Stash.getInt("pneuAvantUsure", 0)), 50, y + 25, paint);
         y = drawText(canvas, "Pneu arr taille: " + Stash.getString("pneuArriereTaille") + "                                                                  " + "Usure arrière (%): " + (Stash.getInt("pneuArriereUsure", 0)), 50, y, paint);
         canvas.drawText("SOUS CAISSE", (pageInfo.getPageWidth() / 2) - 60, y + 5, paint);
 
-        y = drawText(canvas, "Échappement: " + (Stash.getBoolean("echappementChecked", false) ? "Non" : "Oui") + "                                                                  " + "Fuite huile: " + (Stash.getBoolean("fuiteHuileChecked", false) ? "Non" : "Oui"), 50, y + 25, paint);
-        y = drawText(canvas, "Fuite liquide de refroidissement: " + (Stash.getBoolean("fuiteLiquideChecked", false) ? "Non" : "Oui"), 50, y, paint);
+        y = drawText(canvas, "Échappement: " + (Stash.getBoolean("echappementChecked", false) ? "\u2713" : "X") + "                                                                  " + "Fuite huile: " + (Stash.getBoolean("fuiteHuileChecked", false) ? "\u2713" : "X"), 50, y + 25, paint);
+        y = drawText(canvas, "Fuite liquide de refroidissement: " + (Stash.getBoolean("fuiteLiquideChecked", false) ? "\u2713" : "X"), 50, y, paint);
         canvas.drawText("FREINAGE", (pageInfo.getPageWidth() / 2) - 60, y + 5, paint);
         // Example: Display fetched values from Stash
-        y = drawText(canvas, "Disques Avant: " + Stash.getInt("disquesAvantValue", 0) + "                   " + "Plaquettes Avant: " + Stash.getInt("plaquettesAvantValue", 0) + "                     " + "Flexible G: " + (Stash.getBoolean("flexibleGChecked", false) ? "Non" : "Oui"), 50, y + 35, paint);
-        y = drawText(canvas, "Flexible D: " + (Stash.getBoolean("flexibleDChecked", false) ? "Non" : "Oui") + "                          " + "Disques Arriere: " + (Stash.getBoolean("disquesArriereOuiSelected", false) ? Stash.getInt("disquesArriereValue", 0) : "Non") + "                     " + "Plaquettes Arriere: " + Stash.getInt("plaquettesArriereValue", 0), 50, y, paint);
-        y = drawText(canvas, "Flexible Arriere G: " + (Stash.getBoolean("flexibleArriereGChecked", false) ? "Non" : "Oui") + "                                                                       " + "Flexible Arriere D: " + (Stash.getBoolean("flexibleArriereDChecked", false) ? "Non" : "Oui"), 50, y, paint);
+        y = drawText(canvas, "Disques Avant: " + Stash.getInt("disquesAvantValue", 0) + "                   " + "Plaquettes Avant: " + Stash.getInt("plaquettesAvantValue", 0) + "                     " + "Flexible G: " + (Stash.getBoolean("flexibleGChecked", false) ? "X" : "\u2713"), 50, y + 35, paint);
+        y = drawText(canvas, "Flexible D: " + (Stash.getBoolean("flexibleDChecked", false) ? "X" : "\u2713") + "                          " + "Disques Arriere: " + (Stash.getBoolean("disquesArriereOuiSelected", false) ? Stash.getInt("disquesArriereValue", 0) : "X") + "                     " + "Plaquettes Arriere: " + Stash.getInt("plaquettesArriereValue", 0), 50, y, paint);
+        y = drawText(canvas, "Flexible Arriere G: " + (Stash.getBoolean("flexibleArriereGChecked", false) ? "X" : "\u2713") + "                                                                       " + "Flexible Arriere D: " + (Stash.getBoolean("flexibleArriereDChecked", false) ? "X" : "\u2713"), 50, y, paint);
 
         canvas.drawText("DIRECTION / SUSPENSION / TRANSMISSION", (pageInfo.getPageWidth() / 2) - 130, y + 25, paint);
         paint.setTextSize(13);
         paint.setTextAlign(Paint.Align.LEFT);
         paint.setFakeBoldText(false);
         y = drawThreeTexts(canvas,
-                "Bielette Direction G: " + (Stash.getBoolean("bieletteDirectionGChecked", false) ? "Oui" : "Non"),
-                "Rotule Direction G: " + (Stash.getBoolean("rotuleDirectionGChecked", false) ? "Oui" : "Non"),
-                "Amortisseur G: " + (Stash.getBoolean("amortisseurGChecked", false) ? "Oui" : "Non"),
+                "Bielette Direction G: " + (Stash.getBoolean("bieletteDirectionGChecked", false) ? "\u2713" : "X"),
+                "Rotule Direction G: " + (Stash.getBoolean("rotuleDirectionGChecked", false) ? "\u2713" : "X"),
+                "Amortisseur G: " + (Stash.getBoolean("amortisseurGChecked", false) ? "\u2713" : "X"),
                 50, y + 65, paint);
 
         y = drawThreeTexts(canvas,
-                "Ressort G: " + (Stash.getBoolean("ressortGChecked", false) ? "Oui" : "Non"),
-                "Roulement AVG: " + (Stash.getBoolean("roulementAVGChecked", false) ? "Oui" : "Non"),
-                "Soufflet Cardan AVG: " + (Stash.getBoolean("souffletCardanAVGChecked", false) ? "Oui" : "Non"),
+                "Ressort G: " + (Stash.getBoolean("ressortGChecked", false) ? "\u2713" : "X"),
+                "Roulement AVG: " + (Stash.getBoolean("roulementAVGChecked", false) ? "\u2713" : "X"),
+                "Soufflet Cardan AVG: " + (Stash.getBoolean("souffletCardanAVGChecked", false) ? "\u2713" : "X"),
                 50, y, paint);
 
         y = drawThreeTexts(canvas,
-                "Bielette Direction D: " + (Stash.getBoolean("bieletteDirectionDChecked", false) ? "Oui" : "Non"),
-                "Rotule Direction D: " + (Stash.getBoolean("rotuleDirectionDChecked", false) ? "Oui" : "Non"),
-                "Rotule Triangle Suspension D: " + (Stash.getBoolean("rotuleTriangleSuspensionDChecked", false) ? "Oui" : "Non"),
+                "Bielette Direction D: " + (Stash.getBoolean("bieletteDirectionDChecked", false) ? "\u2713" : "X"),
+                "Rotule Direction D: " + (Stash.getBoolean("rotuleDirectionDChecked", false) ? "\u2713" : "X"),
+                "Rotule Triangle Suspension D: " + (Stash.getBoolean("rotuleTriangleSuspensionDChecked", false) ? "\u2713" : "X"),
                 50, y, paint);
 
         y = drawThreeTexts(canvas,
-                "Amortisseur D: " + (Stash.getBoolean("amortisseurDChecked", false) ? "Oui" : "Non"),
-                "Ressort D: " + (Stash.getBoolean("ressortDChecked", false) ? "Oui" : "Non"),
-                "Soufflet Cardan AVD: " + (Stash.getBoolean("souffletCardanAVDChecked", false) ? "Oui" : "Non"),
+                "Amortisseur D: " + (Stash.getBoolean("amortisseurDChecked", false) ? "\u2713" : "X"),
+                "Ressort D: " + (Stash.getBoolean("ressortDChecked", false) ? "\u2713" : "X"),
+                "Soufflet Cardan AVD: " + (Stash.getBoolean("souffletCardanAVDChecked", false) ? "\u2713" : "X"),
                 50, y, paint);
 
         y = drawThreeTexts(canvas,
-                "Roulement AVD: " + (Stash.getBoolean("roulementAVDChecked", false) ? "Oui" : "Non"),
-                "Roulement ARG: " + (Stash.getBoolean("roulementARGChecked", false) ? "Oui" : "Non"),
-                "Roulement ARD: " + (Stash.getBoolean("roulementARDChecked", false) ? "Oui" : "Non"),
+                "Roulement AVD: " + (Stash.getBoolean("roulementAVDChecked", false) ? "\u2713" : "X"),
+                "Roulement ARG: " + (Stash.getBoolean("roulementARGChecked", false) ? "\u2713" : "X"),
+                "Roulement ARD: " + (Stash.getBoolean("roulementARDChecked", false) ? "\u2713" : "X"),
                 50, y, paint);
         Log.d("gat", y + "");
         y = 60;
@@ -447,11 +450,7 @@ public class PdfPreviewActivity extends AppCompatActivity {
 
         // Finish the page
         document.finishPage(page);
-        page = document.startPage(pageInfo);
-        canvas = page.getCanvas();
-        // Optionally, you can draw something on the blank page here
-        document.finishPage(page);
-        // Save the document
+
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Choose an action")
@@ -522,7 +521,7 @@ public class PdfPreviewActivity extends AppCompatActivity {
         paint.setTextAlign(Paint.Align.LEFT);
         paint.setColor(getResources().getColor(android.R.color.black));
         paint.setFakeBoldText(false);
-        canvas.drawText(label1 + " :    " + (checkBox1.isChecked() ? "Non" : "Oui") + "                                                 " + label2 + " :    " + (checkBox2.isChecked() ? "Non" : "Oui"), 50, y, paint);
+        canvas.drawText(label1 + " :    " + (checkBox1.isChecked() ? "X" : "\u2713") + "                                                 " + label2 + " :    " + (checkBox2.isChecked() ? "X" : "\u2713"), 50, y, paint);
         return y + 20; // Return new y position
     }
 
@@ -599,16 +598,10 @@ public class PdfPreviewActivity extends AppCompatActivity {
         paint.setColor(getResources().getColor(android.R.color.black));
         paint.setFakeBoldText(false);
 
-        float columnSpacing = 180; // Adjust spacing as needed
-
-        // Draw the first column
-        canvas.drawText(label1 + " : " + (checkBox1.isChecked() ? "Oui" : "Non"), 50, y, paint);
-
-        // Draw the second column
-        canvas.drawText(label2 + " : " + (checkBox2.isChecked() ? "Oui" : "Non"), 50 + columnSpacing, y, paint);
-
-        // Draw the third column
-        canvas.drawText(label3 + " : " + (checkBox3.isChecked() ? "Oui" : "Non"), 50 + 2 * columnSpacing, y, paint);
+        float columnSpacing = 180;
+        canvas.drawText(label1 + " : " + (checkBox1.isChecked() ? "\u2713" : "X"), 50, y, paint);
+        canvas.drawText(label2 + " : " + (checkBox2.isChecked() ? "\u2713" : "X"), 50 + columnSpacing, y, paint);
+        canvas.drawText(label3 + " : " + (checkBox3.isChecked() ? "\u2713" : "X"), 50 + 2 * columnSpacing, y, paint);
 
         return y + 20; // Adjust this value to control the vertical spacing between rows
     }

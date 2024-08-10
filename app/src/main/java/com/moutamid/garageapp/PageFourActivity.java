@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,18 +23,90 @@ public class PageFourActivity extends AppCompatActivity {
             flexibleArriereGCheckBox, flexibleArriereDCheckBox;
     private RadioGroup disquesArriereRadioGroup;
     private RadioButton disquesArriereOuiRadioButton, disquesArriereNonRadioButton;
-
+    TextView percentage1;
+    TextView percentage2;
+    TextView percentage3;
+    TextView percentage4;
+    int roundedProgress1, roundedProgress2, roundedProgress3, roundedProgress4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_four);
 
-        // Initialize SeekBars
+        percentage1 = findViewById(R.id.percentage1);
+        percentage2 = findViewById(R.id.percentage2);
+        percentage3 = findViewById(R.id.percentage3);
+        percentage4 = findViewById(R.id.percentage4);
+
         disquesAvantSeekBar = findViewById(R.id.disques_avant);
         plaquettesAvantSeekBar = findViewById(R.id.plaquettes_avant);
         disquesArriereSeekBar = findViewById(R.id.disques_arriere);
         plaquettesArriereSeekBar = findViewById(R.id.plaquettes_arriere);
 
+        disquesAvantSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                roundedProgress1 = (progress / 10) * 10;
+                seekBar.setProgress(roundedProgress1);
+                percentage1.setText(roundedProgress1 + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+        plaquettesAvantSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                roundedProgress2 = (progress / 10) * 10;
+                seekBar.setProgress(roundedProgress2);
+                percentage2.setText(roundedProgress2 + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+        disquesArriereSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                roundedProgress3 = (progress / 10) * 10;
+                seekBar.setProgress(roundedProgress3);
+                percentage3.setText(roundedProgress3 + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+        plaquettesArriereSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                roundedProgress4 = (progress / 10) * 10;
+                seekBar.setProgress(roundedProgress4);
+                percentage4.setText(roundedProgress4 + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
         // Initialize CheckBoxes
         flexibleGCheckBox = findViewById(R.id.flexible_g);
         flexibleDCheckBox = findViewById(R.id.flexible_d);
@@ -110,10 +183,10 @@ public class PageFourActivity extends AppCompatActivity {
 
     private void saveDataToStash() {
         // Collect data from UI components and save to Stash
-        Stash.put("disquesAvantValue", disquesAvantSeekBar.getProgress());
-        Stash.put("plaquettesAvantValue", plaquettesAvantSeekBar.getProgress());
-        Stash.put("disquesArriereValue", disquesArriereSeekBar.getProgress());
-        Stash.put("plaquettesArriereValue", plaquettesArriereSeekBar.getProgress());
+        Stash.put("disquesAvantValue", roundedProgress1);
+        Stash.put("plaquettesAvantValue", roundedProgress2);
+        Stash.put("disquesArriereValue", roundedProgress3);
+        Stash.put("plaquettesArriereValue", roundedProgress4);
         Stash.put("flexibleGChecked", flexibleGCheckBox.isChecked());
         Stash.put("flexibleDChecked", flexibleDCheckBox.isChecked());
         Stash.put("flexibleArriereGChecked", flexibleArriereGCheckBox.isChecked());

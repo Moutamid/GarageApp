@@ -1,14 +1,15 @@
 package com.moutamid.garageapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.fxn.stash.Stash;
 
@@ -16,16 +17,53 @@ public class PageFiveActivity extends AppCompatActivity {
 
     private EditText pneuAvantTailleEditText, pneuArriereTailleEditText;
     private SeekBar pneuAvantUsureSeekBar, pneuArriereUsureSeekBar;
-
+    TextView percentage1, percentage2;
+    int roundedProgress1, roundedProgress2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_five);
 
+        percentage1 = findViewById(R.id.percentage1);
+        percentage2 = findViewById(R.id.percentage2);
         pneuAvantTailleEditText = findViewById(R.id.pneu_av_taille);
         pneuArriereTailleEditText = findViewById(R.id.pneu_arr_taille);
         pneuAvantUsureSeekBar = findViewById(R.id.usure_avant);
         pneuArriereUsureSeekBar = findViewById(R.id.usure_arriere);
+        pneuAvantUsureSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                roundedProgress1 = (progress / 10) * 10;
+                seekBar.setProgress(roundedProgress1);
+                percentage1.setText(roundedProgress1 + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+        pneuArriereUsureSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                roundedProgress2 = (progress / 10) * 10;
+                seekBar.setProgress(roundedProgress2);
+                percentage2.setText(roundedProgress2 + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+
 
         Button nextButton = findViewById(R.id.next_button);
         Button backButton = findViewById(R.id.back_button);
@@ -34,10 +72,7 @@ public class PageFiveActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validateInputs()) {
-                    // Save data to Stash
                     saveDataToStash();
-
-                    // Proceed to the next screen (Page Six in this case)
                     startActivity(new Intent(PageFiveActivity.this, PageSixActivity.class));
                 }
             }
@@ -46,8 +81,7 @@ public class PageFiveActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle going back to previous screen if needed
-                finish(); // Finish current activity to go back
+                finish();
             }
         });
     }
@@ -83,12 +117,12 @@ public class PageFiveActivity extends AppCompatActivity {
         return true;
     }
 
-    private void saveDataToStash() {
-        // Save data to Stash
+    private void saveDataToStash()
+    {
         Stash.put("pneuAvantTaille", pneuAvantTailleEditText.getText().toString().trim());
         Stash.put("pneuArriereTaille", pneuArriereTailleEditText.getText().toString().trim());
-        Stash.put("pneuAvantUsure", pneuAvantUsureSeekBar.getProgress());
-        Stash.put("pneuArriereUsure", pneuArriereUsureSeekBar.getProgress());
+        Stash.put("pneuAvantUsure", roundedProgress1);
+        Stash.put("pneuArriereUsure", roundedProgress2);
     }
     public void camera(View view) {
         startActivity(new Intent(this, ImagesActivity.class));

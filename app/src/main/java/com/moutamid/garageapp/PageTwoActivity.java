@@ -72,7 +72,6 @@ public class PageTwoActivity extends AppCompatActivity {
                 boolean optiqueTerneGChecked = optiqueTerneGCheckbox.isChecked();
                 boolean optiqueTerneDChecked = optiqueTerneDCheckbox.isChecked();
                 boolean plaqueImmatriculationAvChecked = plaqueImmatriculationAvCheckbox.isChecked();
-
                 Intent intent = new Intent(PageTwoActivity.this, PageThreeActivity.class);
                 Stash.put("veilleuseAvgChecked", veilleuseAvgChecked);
                 Stash.put("veilleuseAvdChecked", veilleuseAvdChecked);

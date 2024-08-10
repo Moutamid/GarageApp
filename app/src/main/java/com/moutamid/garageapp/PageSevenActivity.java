@@ -46,7 +46,6 @@ public class PageSevenActivity extends AppCompatActivity {
 
 
     private void saveDataToStash() {
-        // Save checkbox states to Stash
         Stash.put("echappementChecked", echappementCheckBox.isChecked());
         Stash.put("fuiteHuileChecked", fuiteHuileCheckBox.isChecked());
         Stash.put("fuiteLiquideChecked", fuiteLiquideCheckBox.isChecked());
