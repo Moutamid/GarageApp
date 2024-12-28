@@ -2,7 +2,6 @@ package com.moutamid.garageapp.helper;
 
 import android.app.Application;
 
-import com.fxn.stash.Stash;
 
 public class MyApplication extends Application {
     @Override

@@ -8,7 +8,8 @@ import android.widget.CheckBox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fxn.stash.Stash;
+import com.moutamid.garageapp.helper.Stash;
+
 
 public class PageThreeActivity extends AppCompatActivity {
 

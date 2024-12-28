@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fxn.stash.Stash;
+import com.moutamid.garageapp.helper.Stash;
+
 
 public class PageFourActivity extends AppCompatActivity {
 

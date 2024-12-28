@@ -13,7 +13,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fxn.stash.Stash;
+
+import com.moutamid.garageapp.helper.Stash;
 
 import org.json.JSONException;
 import org.json.JSONObject;

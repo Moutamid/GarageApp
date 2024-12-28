@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-import com.fxn.stash.Stash;
+import com.moutamid.garageapp.helper.Stash;
+
 
 public class PageSevenActivity extends AppCompatActivity {
 
