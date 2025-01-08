@@ -419,14 +419,12 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/kanit_bold"
             android:text="Optique G"
-            android:visibility="gone"
 
             android:textSize="18sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:visibility="gone"
 
             android:layout_marginTop="5dp">
 

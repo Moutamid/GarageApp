@@ -38,6 +38,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public class PdfPreviewActivity extends AppCompatActivity {
@@ -191,7 +192,7 @@ public class PdfPreviewActivity extends AppCompatActivity {
 
     private void setStoredValues() {
 
-        echappementCheckBox.setChecked( Stash.getBoolean("echappementChecked"));
+        echappementCheckBox.setChecked(Stash.getBoolean("echappementChecked"));
         fuiteHuileCheckBox.setChecked(Stash.getBoolean("fuiteHuileChecked"));
         fuiteLiquideCheckBox.setChecked(Stash.getBoolean("fuiteLiquideChecked"));
 
@@ -274,7 +275,8 @@ public class PdfPreviewActivity extends AppCompatActivity {
         souffletCardanAVDCheckBox.setChecked(Stash.getBoolean("souffletCardanAVDChecked", false));
         roulementAVDCheckBox.setChecked(Stash.getBoolean("roulementAVDChecked", false));
         roulementARGCheckBox.setChecked(Stash.getBoolean("roulementARGChecked", false));
-        roulementARDCheckBox.setChecked(Stash.getBoolean("roulementARDChecked", false));  }
+        roulementARDCheckBox.setChecked(Stash.getBoolean("roulementARDChecked", false));
+    }
 
     // Method to generate PDF
     private void generatePdf() {
@@ -324,39 +326,34 @@ public class PdfPreviewActivity extends AppCompatActivity {
 //                "                          Clignotant AVD", "Optique G", y);
         canvas.drawText("ECLAIRAGE ARRIERE", (pageInfo.getPageWidth() / 2) - 60, y + 20, paint);
 
-        y = drawCheckboxState(canvas, veilleuseGCheckbox, veilleuseDCheckbox, veilleuseDCheckbox,
-                "Veilleuse G", "Veilleuse D", "Veilleuse D", y + 45);
-        y = drawCheckboxState(canvas, eclairagePlaqueGCheckbox, eclairagePlaqueDCheckbox, eclairagePlaqueDCheckbox,
-                "Eclairage Plaque G", "Eclairage Plaque D", "Eclairage Plaque D", y);
-        y = drawCheckboxState(canvas, stopGCheckbox, stopDCheckbox, stopDCheckbox,
-                "Stop G", "Stop D", "Stop D", y);
-        y = drawCheckboxState(canvas, troisiemeStopCheckbox, clignotantGCheckbox, clignotantGCheckbox,
-                "Troisieme Stop", "Clignotant G", "Clignotant G", y);
-        y = drawCheckboxState(canvas, clignotantDCheckbox, marcheArriereGCheckbox, marcheArriereGCheckbox,
-                "Clignotant D", "Marche Arriere G", "Marche Arriere G", y);
-        y = drawCheckboxState(canvas, marcheArriereDCheckbox, antiBrouillardCheckbox, antiBrouillardCheckbox,
-                "Marche Arriere D", "Anti-Brouillard", "Anti-Brouillard", y);
-        y = drawCheckboxState(canvas, optiqueCasserGCheckbox_page3, optiqueCasserDCheckbox_page3, optiqueCasserDCheckbox_page3,
-                "Optique G", "Optique D", "Optique D", y);
+        y = drawMultipleCheckboxStates(canvas, 120);
         if (plaqueImmatriculationArrCheckbox.isChecked()) {
-            y = drawText(canvas, "Plaque Immatriculation ARR :  " + "\u2713", 50, y, paint);
-        } else {
             y = drawText(canvas, "Plaque Immatriculation ARR :  " + "X", 50, y, paint);
+        } else {
+            y = drawText(canvas, "Plaque Immatriculation ARR :  " + "\u2713", 50, y, paint);
         }
 
         canvas.drawText("PNEUMATIQUE", (pageInfo.getPageWidth() / 2) - 60, y + 5, paint);
 
-        y = drawText(canvas, "Pneu av taille: " + Stash.getString("pneuAvantTaille") + "                                                                  " + "Usure avant (%): " + (Stash.getInt("pneuAvantUsure", 0)), 50, y + 25, paint);
-        y = drawText(canvas, "Pneu arr taille: " + Stash.getString("pneuArriereTaille") + "                                                                  " + "Usure arrière (%): " + (Stash.getInt("pneuArriereUsure", 0)), 50, y, paint);
+        y = drawText(canvas, "Pneu av taille: " + Stash.getString("pneuAvantTaille") + "                                                                  " +
+                "Usure avant (%): " + Stash.getInt("pneuAvantUsure", 0), 50, y + 25, paint);
+        y = drawText(canvas, "Pneu arr taille: " + Stash.getString("pneuArriereTaille") + "                                                                  " +
+                "Usure arrière (%): " + Stash.getInt("pneuArriereUsure", 0), 50, y, paint);
         canvas.drawText("SOUS CAISSE", (pageInfo.getPageWidth() / 2) - 60, y + 5, paint);
 
-        y = drawText(canvas, "Échappement: " + (Stash.getBoolean("echappementChecked", false) ?  "X":"\u2713" ) + "                                                                  " + "Fuite huile: " + (Stash.getBoolean("fuiteHuileChecked", false) ? "X":"\u2713"), 50, y + 25, paint);
-        y = drawText(canvas, "Fuite liquide de refroidissement: " + (Stash.getBoolean("fuiteLiquideChecked", false) ? "X":"\u2713" ), 50, y, paint);
+        y = drawText(canvas, "Échappement: " + (Stash.getBoolean("echappementChecked", false) ? "X" : "\u2713") + "                                                                  " +
+                "Fuite huile: " + (Stash.getBoolean("fuiteHuileChecked", false) ? "X" : "\u2713"), 50, y + 25, paint);
+        y = drawText(canvas, "Fuite liquide de refroidissement: " + (Stash.getBoolean("fuiteLiquideChecked", false) ? "X" : "\u2713"), 50, y, paint);
         canvas.drawText("FREINAGE", (pageInfo.getPageWidth() / 2) - 60, y + 5, paint);
 
-        y = drawText(canvas, "Disques Avant: " + Stash.getInt("disquesAvantValue", 0) + "                   " + "Plaquettes Avant: " + Stash.getInt("plaquettesAvantValue", 0) + "                  " + "Flexible G: " + (Stash.getBoolean("flexibleGChecked", false) ? "\u2713" : "X"), 50, y + 35, paint);
-        y = drawText(canvas, "Flexible D: " + (Stash.getBoolean("flexibleDChecked", false) ? "\u2713" : "X") + "                          " + "Disques Arriere: " + (Stash.getBoolean("disquesArriereOuiSelected", false) ? Stash.getInt("disquesArriereValue", 0) : "X") + "                     " + "Plaquettes Arriere: " + Stash.getInt("plaquettesArriereValue", 0), 50, y, paint);
-        y = drawText(canvas, "Flexible Arriere G: " + (Stash.getBoolean("flexibleArriereGChecked", false) ? "\u2713" : "X") + "                                                                 " + "Flexible Arriere D: " + (Stash.getBoolean("flexibleArriereDChecked", false) ? "\u2713" : "X"), 50, y, paint);
+        y = drawText(canvas, "Disques Avant: " + Stash.getInt("disquesAvantValue", 0) + "                   " +
+                "Plaquettes Avant: " + Stash.getInt("plaquettesAvantValue", 0) + "                  " +
+                "Flexible G: " + (Stash.getBoolean("flexibleGChecked", false) ? "X" : "\u2713"), 50, y + 35, paint);
+        y = drawText(canvas, "Flexible D: " + (Stash.getBoolean("flexibleDChecked", false) ? "X" : "\u2713") + "                          " +
+                "Disques Arriere: " + (Stash.getBoolean("disquesArriereOuiSelected", false) ? Stash.getInt("disquesArriereValue", 0) : "X") + "                     " +
+                "Plaquettes Arriere: " + Stash.getInt("plaquettesArriereValue", 0), 50, y, paint);
+        y = drawText(canvas, "Flexible Arriere G: " + (Stash.getBoolean("flexibleArriereGChecked", false) ? "X" : "\u2713") + "                                                                 " +
+                "Flexible Arriere D: " + (Stash.getBoolean("flexibleArriereDChecked", false) ? "X" : "\u2713"), 50, y, paint);
 
         canvas.drawText("DIRECTION / SUSPENSION / TRANSMISSION", (pageInfo.getPageWidth() / 2) - 130, y + 25, paint);
         paint.setTextSize(13);
@@ -392,6 +389,7 @@ public class PdfPreviewActivity extends AppCompatActivity {
                 "Roulement ARG: " + (Stash.getBoolean("roulementARGChecked", false) ? "X" : "\u2713"),
                 "Roulement ARD: " + (Stash.getBoolean("roulementARDChecked", false) ? "X" : "\u2713"),
                 50, y, paint);
+
 
         Log.d("gat", y + "");
         y = 60;
@@ -465,14 +463,14 @@ public class PdfPreviewActivity extends AppCompatActivity {
                 });
         builder.create().show();
     }
-    // Updated helper methods
+
     private int drawText(Canvas canvas, String text, float x, float y, Paint paint) {
         paint = new Paint();
         paint.setTextSize(13);
         paint.setTextAlign(Paint.Align.LEFT);
         paint.setFakeBoldText(false);
 
-        float currentX = 50;
+        float currentX = x;
         StringBuilder currentText = new StringBuilder();
 
         for (int i = 0; i < text.length(); i++) {
@@ -489,11 +487,11 @@ public class PdfPreviewActivity extends AppCompatActivity {
 
                 // Draw the symbol with appropriate color and swapped symbol
                 if (currentChar == 'X') {
-                    paint.setColor(Color.GREEN);
-                    canvas.drawText("\u2713", currentX, y, paint);
-                } else { // '\u2713'
                     paint.setColor(Color.RED);
                     canvas.drawText("X", currentX, y, paint);
+                } else { // '\u2713'
+                    paint.setColor(Color.GREEN);
+                    canvas.drawText("\u2713", currentX, y, paint);
                 }
                 currentX += paint.measureText("X"); // Use consistent width for both symbols
             } else {
@@ -501,14 +499,16 @@ public class PdfPreviewActivity extends AppCompatActivity {
             }
         }
 
-        // Draw any remaining text in black
         if (currentText.length() > 0) {
-            paint.setColor(Color.BLACK);
-            canvas.drawText(currentText.toString(), currentX, y, paint);
-        }
 
+            paint.setColor(Color.BLACK);
+
+            canvas.drawText(currentText.toString(), currentX, y, paint);
+
+        }
         return (int) (y + 20);
     }
+
     private int drawThreeTexts(Canvas canvas, String text1, String text2, String text3, float x, float y, Paint paint) {
         float columnSpacing = 150;
 
@@ -522,7 +522,6 @@ public class PdfPreviewActivity extends AppCompatActivity {
     private void drawTextWithColoredSymbols(Canvas canvas, String text, float x, float y, Paint paint) {
         String[] parts = text.split("(?=X|\\u2713)");
         float currentX = x;
-
         for (String part : parts) {
             if (part.startsWith("X")) {
                 paint.setColor(Color.GREEN);
@@ -536,6 +535,52 @@ public class PdfPreviewActivity extends AppCompatActivity {
             }
             currentX += paint.measureText(part);
         }
+    }
+
+    private int drawCheckboxState(Canvas canvas, CheckBox checkBox1, CheckBox checkBox2, CheckBox checkBox3,
+                                  String label1, String label2, String label3, int y) {
+        Paint paint = new Paint();
+        paint.setTextSize(13);
+        paint.setTextAlign(Paint.Align.LEFT);
+        paint.setFakeBoldText(false);
+        float columnSpacing = 180;
+
+        // Helper function to draw a single checkbox state
+        Consumer<Integer> drawColumn = (column) -> {
+            String label = column == 0 ? label1 : (column == 1 ? label2 : label3);
+            CheckBox checkbox = column == 0 ? checkBox1 : (column == 1 ? checkBox2 : checkBox3);
+
+            // Skip if checkbox or label is null or empty
+            if (checkbox == null || label.isEmpty()) {
+                return;
+            }
+
+            float xPos = 50 + (column * columnSpacing);
+
+            // Draw label in black
+            paint.setColor(Color.BLACK);
+            String labelText = label + " : ";
+            canvas.drawText(labelText, xPos, y, paint);
+
+            // Draw symbol with color and swapped position
+            float symbolX = xPos + paint.measureText(labelText);
+            if (checkbox.isChecked()) {
+                paint.setColor(Color.RED);
+                canvas.drawText("X", symbolX, y, paint); // Draw X in red when checked
+            } else {
+                paint.setColor(Color.GREEN);
+                canvas.drawText("\u2713", symbolX, y, paint); // Draw checkmark in green when unchecked
+            }
+        };
+
+        // Draw each column
+        drawColumn.accept(0);
+        drawColumn.accept(1);
+        if (!label3.isEmpty() && checkBox3 != null) {
+            drawColumn.accept(2);
+        }
+
+        return y + 20;
     }
 
     private void shareFile(PdfDocument document) {
@@ -596,8 +641,41 @@ public class PdfPreviewActivity extends AppCompatActivity {
         finishAffinity();
     }
 
-    private int drawCheckboxState(Canvas canvas, CheckBox checkBox1, CheckBox checkBox2, CheckBox checkBox3,
-                                  String label1, String label2, String label3, int y) {
+    private int drawMultipleCheckboxStates(Canvas canvas, int y) {
+        // Define the checkboxes and labels as arrays for iteration
+        CheckBox[][] checkboxes = {
+                {veilleuseGCheckbox, veilleuseDCheckbox},
+                {eclairagePlaqueGCheckbox, eclairagePlaqueDCheckbox},
+                {stopGCheckbox, stopDCheckbox},
+                {troisiemeStopCheckbox, clignotantGCheckbox},
+                {clignotantDCheckbox, marcheArriereGCheckbox},
+                {marcheArriereDCheckbox, antiBrouillardCheckbox},
+                {optiqueCasserGCheckbox_page3, optiqueCasserDCheckbox_page3}
+        };
+
+        String[][] labels = {
+                {"Veilleuse G", "Veilleuse D"},
+                {"Eclairage Plaque G", "Eclairage Plaque D"},
+                {"Stop G", "Stop D"},
+                {"Troisieme Stop", "Clignotant G"},
+                {"Clignotant D", "Marche Arriere G"},
+                {"Marche Arriere D", "Anti-Brouillard"},
+                {"Optique G", "Optique D"}
+        };
+
+        // Iterate over the checkboxes and labels arrays to draw each state
+        for (int i = 0; i < checkboxes.length; i++) {
+            y = drawCheckboxState1(canvas,
+                    checkboxes[i][0], checkboxes[i][1],
+                    labels[i][0], labels[i][1],
+                    y + (i == 0 ? 155 : 0)); // Add spacing only after the first element
+        }
+
+        return y;
+    }
+
+    private int drawCheckboxState1(Canvas canvas, CheckBox checkBox1, CheckBox checkBox2,
+                                  String label1, String label2, int y) {
         Paint paint = new Paint();
         paint.setTextSize(13);
         paint.setTextAlign(Paint.Align.LEFT);
@@ -605,16 +683,12 @@ public class PdfPreviewActivity extends AppCompatActivity {
         float columnSpacing = 180;
 
         // Helper function to draw a single checkbox state
-        Consumer<Integer> drawColumn = (column) -> {
-            String label = column == 0 ? label1 : (column == 1 ? label2 : label3);
-            CheckBox checkbox = column == 0 ? checkBox1 : (column == 1 ? checkBox2 : checkBox3);
-
-            // Skip if checkbox or label is null or empty
+        BiConsumer<CheckBox, String> drawColumn = (checkbox, label) -> {
             if (checkbox == null || label.isEmpty()) {
-                return;
+                return; // Skip if checkbox or label is null/empty
             }
 
-            float xPos = 50 + (column * columnSpacing);
+            float xPos = 50 + (checkbox == checkBox2 ? columnSpacing : 0); // Adjust position for the second column
 
             // Draw label in black
             paint.setColor(Color.BLACK);
@@ -625,21 +699,18 @@ public class PdfPreviewActivity extends AppCompatActivity {
             float symbolX = xPos + paint.measureText(labelText);
             if (checkbox.isChecked()) {
                 paint.setColor(Color.RED);
-                canvas.drawText("\u2713", symbolX, y, paint); // Draw checkmark in red when checked
+                canvas.drawText("X", symbolX, y, paint); // Draw X
+
             } else {
                 paint.setColor(Color.GREEN);
-                canvas.drawText("X", symbolX, y, paint); // Draw X in green when unchecked
-            }
+                canvas.drawText("\u2713", symbolX, y, paint); // Draw checkmark
+                }
         };
 
-        // Draw each column
-        drawColumn.accept(0);
-        drawColumn.accept(1);
-        if (!label3.isEmpty() && checkBox3 != null) {
-            drawColumn.accept(2);
-        }
+        // Draw both columns
+        drawColumn.accept(checkBox1, label1);
+        drawColumn.accept(checkBox2, label2);
 
-        return y + 20;
+        return y + 20; // Return updated y position
     }
-
 }
